@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
         <NavLink className="navbar-brand" to="/">
           <img
             style={{ width: 25 + "%" }}
@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/create">
+              <NavLink className="nav-link fw-bold text-warning" to="/create">
                 Create Record
               </NavLink>
             </li>

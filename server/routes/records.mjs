@@ -1,5 +1,5 @@
 import express from "express";
-import db from "../db/conn.mjs";
+import db from "../db/conn.mjs";  
 import { ObjectId } from "mongodb";
 
 const router = express.Router();
@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
 });
 
 //This section will help you update a record by id
-router.patch("/", async (req, res) => {
+router.patch("/:id", async (req, res) => {
   const query = { _id: new ObjectId(req.params.id) };
   const updates = {
     $set: {

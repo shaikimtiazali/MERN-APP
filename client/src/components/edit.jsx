@@ -14,9 +14,7 @@ export default function Edit() {
   useEffect(() => {
     async function fetchData() {
       const id = params.id.toString();
-      const response = await fetch(
-        `http://localhost:5050/record/${params.id.toString()}`
-      );
+      const response = await fetch(`http://localhost:5050/record/${id}`);
 
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
@@ -30,12 +28,9 @@ export default function Edit() {
         navigate("/");
         return;
       }
-
       setForm(record);
     }
-
     fetchData();
-
     return;
   }, [params.id, navigate]);
 
